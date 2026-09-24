@@ -1,0 +1,56 @@
+/* The portrait is the opening page; two sliding doors reveal it in place. */
+.portfolio .entrance{position:relative;background:var(--cream);color:var(--ink)}
+.entrance:after{content:'';display:block;height:100vh}
+.entrance-stage{position:sticky;top:0;min-height:100svh;isolation:isolate}
+.entrance-profile{min-height:100svh;background:var(--cream)}
+.elevator-cover{position:absolute;inset:0;z-index:40;overflow:clip;color:#edf2fa;pointer-events:none}
+.elevator-door{position:absolute;top:0;bottom:0;width:50%;background:repeating-linear-gradient(90deg,#ffffff02 0px,#ffffff00 2px,#ffffff02 4px),linear-gradient(110deg,#0c172a,#233852 65%,#111e32);will-change:transform}
+.elevator-left{left:0;border-right:1px solid #c4d4ea65;box-shadow:inset -9px 0 18px #060c1966}
+.elevator-right{right:0;background:repeating-linear-gradient(90deg,#ffffff02 0px,#ffffff00 2px,#ffffff02 4px),linear-gradient(250deg,#0c172a,#233852 65%,#111e32);border-left:1px solid #080e1b;box-shadow:inset 9px 0 18px #060c1966}
+.elevator-door:after{content:'';position:absolute;inset:18px;border:1px solid #bacce614;pointer-events:none}
+.door-etch{position:absolute;bottom:90px;font-size:clamp(35px,9vw,140px);letter-spacing:-.06em;color:#c2d3ee08;line-height:1}
+.elevator-left .door-etch{right:25px}.elevator-right .door-etch{left:25px}
+.entrance-navigation{position:relative;z-index:3;pointer-events:auto}
+.entrance-copy{position:relative;z-index:2;min-height:calc(100svh - 170px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:35px 24px 60px;pointer-events:none}
+.entrance-copy .eyebrow{font-size:10px;letter-spacing:2px;color:#b0c1da}
+.floor-indicator{display:flex;gap:18px;align-items:center;justify-content:center;margin-top:32px;border:1px solid #9cafca44;border-radius:4px;background:#08102099;padding:7px 18px;font-size:15px;letter-spacing:3px;color:#b8cbe6;box-shadow:0 0 20px #87a6d013}
+.floor-indicator>span{font-size:20px}
+.entrance-copy h2{font-weight:400;font-size:clamp(55px,6.4vw,100px);letter-spacing:-.055em;line-height:1.02;margin:27px 0 22px}
+.entrance-copy h2 em{color:#bccde6;font-size:1.04em}
+.entrance-copy>p:not(.eyebrow){font-size:18px;line-height:1.8;color:#e0e8f5}
+.entrance-copy>p>span{font-size:14px;color:#a8bad3}
+.entrance-enter{pointer-events:auto;display:inline-flex;align-items:center;gap:22px;font-size:10px;letter-spacing:2px;margin-top:28px;min-height:48px}
+.entrance-arrow{width:48px;height:48px;border:1px solid #a5b9d65c;border-radius:50%;display:grid;place-items:center;transition:background .25s}
+.entrance-arrow svg{width:22px;height:22px;display:block}.entrance-enter:hover .entrance-arrow{background:#b4c8e625}
+.entrance-foot{position:absolute;top:calc(100svh - 60px);left:56px;right:56px;display:flex;justify-content:space-between;gap:20px;font-size:8px;letter-spacing:1.5px;color:#a4b7d2}
+.portfolio .arrow-icon{display:inline-grid;place-items:center;flex-shrink:0;line-height:1;vertical-align:middle}
+.arrow-icon svg{display:block;width:1em;height:1em;min-width:12px;min-height:12px}
+.portfolio .certificate-view>.arrow-icon{display:grid;margin:0;font-size:22px;line-height:1;color:inherit}
+.portfolio .contact-circle{display:grid;place-items:center;padding:0;line-height:1}
+.portfolio .contact-circle>.arrow-icon{margin:0;font-size:48px}
+.portfolio .pill-button>.arrow-icon{padding:0;line-height:1}
+@media(max-width:800px){.entrance-foot{left:22px;right:22px}.entrance-copy h2{font-size:64px}.entrance-copy .eyebrow{font-size:9px}.portfolio .expertise-card{min-width:0}.portfolio .card-skills{overflow-wrap:anywhere}}
+@media(max-width:600px){
+ .entrance-copy{min-height:calc(100svh - 130px);padding:24px 20px 65px}
+ .entrance-copy h2{font-size:clamp(44px,11.8vw,67px);margin:25px 0}
+ .entrance-copy .eyebrow{font-size:7px;letter-spacing:1px;justify-content:center}
+ .floor-indicator{margin-top:20px;font-size:13px}
+ .entrance-copy>p:not(.eyebrow){font-size:17px}.entrance-copy>p>span{font-size:12px;display:block;max-width:250px;margin-top:4px}
+ .entrance-foot{left:20px;right:20px;font-size:7px;letter-spacing:.7px;top:calc(100svh - 40px)}.entrance-foot>span:last-child{display:none}
+ .elevator-door:after{inset:9px}.door-etch{bottom:65px;font-size:12vw}
+ .portfolio .chapter-responsibilities li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:14px;padding-bottom:24px;align-items:start}
+ .portfolio .chapter-responsibilities li>p{min-width:0;margin:0;overflow-wrap:break-word;line-height:1.85}
+ .portfolio .chapter-marker{position:relative;top:auto;backdrop-filter:none}
+ .portfolio .chapter-identity{grid-template-columns:76px minmax(0,1fr);gap:10px 14px}
+ .portfolio .chapter-logo{width:76px}.portfolio .chapter-logo img{width:60px}
+ .portfolio .chapter-role{min-width:0;overflow-wrap:break-word}
+ .portfolio .chapter-content,.portfolio .chapter-responsibilities{min-width:0}
+ .portfolio .expertise-grid{gap:22px}.portfolio .expertise-card{height:auto;min-height:0;padding:25px;overflow:visible}
+ .portfolio .expertise-card .financial-visual{height:150px;min-height:150px;flex-shrink:0;margin:10px 0 25px}
+ .portfolio .expertise-card .eyebrow{line-height:1.7;white-space:normal;min-height:0}
+ .portfolio .expertise-card h3{line-height:1.2;margin-bottom:16px}
+ .portfolio .expertise-card .card-copy{line-height:1.85;padding-bottom:24px}
+ .portfolio .card-skills{line-height:1.9;padding-top:18px}
+ .portfolio .contact-circle>.arrow-icon{font-size:32px}
+}
+@media(prefers-reduced-motion:reduce){.entrance:after{display:none}.entrance-stage{position:relative}.elevator-cover{display:none}.entrance-profile{filter:none!important}}
