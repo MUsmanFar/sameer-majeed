@@ -19,6 +19,9 @@ const geist = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
   title: "Sameer Majeed — Architecture of Financial Clarity",
   description:
     "The professional journey of Sameer Majeed, ACA FIPA FFA — from audit foundations to FP&A and fintech in Riyadh.",
@@ -28,6 +31,21 @@ export const metadata: Metadata = {
     description:
       "A cinematic career journey: audit, accounts, reporting, FP&A, and fintech.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sameer Majeed — Chartered Accountant, ACA, FIPA, FFA",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sameer Majeed — Architecture of Financial Clarity",
+    description:
+      "A cinematic career journey: audit, accounts, reporting, FP&A, and fintech.",
+    images: ["/og-image.png"],
   },
 };
 

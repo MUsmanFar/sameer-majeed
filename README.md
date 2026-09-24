@@ -28,6 +28,10 @@ npm start
 
 No environment variables are required for the public portfolio build.
 
+The 1200 × 630 social preview lives at `public/og-image.png`. Set
+`NEXT_PUBLIC_SITE_URL` in deployment to the final public origin so Open Graph
+and Twitter image URLs resolve correctly.
+
 ## Key paths
 
 - `app/page.tsx` — site entry
