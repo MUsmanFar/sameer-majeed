@@ -18,22 +18,28 @@ const geist = localFont({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://sameer-majeed.vercel.app");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  ),
+  metadataBase: new URL(siteUrl),
   title: "Sameer Majeed — Architecture of Financial Clarity",
   description:
     "The professional journey of Sameer Majeed, ACA FIPA FFA — from audit foundations to FP&A and fintech in Riyadh.",
   authors: [{ name: "Sameer Majeed" }],
   openGraph: {
+    url: "/",
+    siteName: "Sameer Majeed",
     title: "Sameer Majeed — Architecture of Financial Clarity",
     description:
       "A cinematic career journey: audit, accounts, reporting, FP&A, and fintech.",
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.png?v=2",
         width: 1200,
         height: 630,
         alt: "Sameer Majeed — Chartered Accountant, ACA, FIPA, FFA",
@@ -45,7 +51,7 @@ export const metadata: Metadata = {
     title: "Sameer Majeed — Architecture of Financial Clarity",
     description:
       "A cinematic career journey: audit, accounts, reporting, FP&A, and fintech.",
-    images: ["/og-image.png"],
+    images: ["/og-image.png?v=2"],
   },
 };
 

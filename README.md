@@ -27,10 +27,12 @@ npm start
 5. Node.js: **20.x** or newer.
 
 No environment variables are required for the public portfolio build.
+`NEXT_PUBLIC_SITE_URL` is optional when deploying to a custom domain; Vercel's
+production URL is detected automatically, with `sameer-majeed.vercel.app` as
+the final fallback.
 
-The 1200 × 630 social preview lives at `public/og-image.png`. Set
-`NEXT_PUBLIC_SITE_URL` in deployment to the final public origin so Open Graph
-and Twitter image URLs resolve correctly.
+The 1200 × 630 social preview lives at `public/og-image.png` and is connected
+to both Open Graph and Twitter metadata.
 
 ## Key paths
 
